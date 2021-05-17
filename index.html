@@ -7,6 +7,8 @@
 <title>삼성 갤럭시 폴드</title>
 <link rel="stylesheet" type="text/css" href="library/css/common.css">
 <script type="text/javascript" src="library/js/jquery.1.12.4.js"></script>
+<script type="text/javascript" src="library/js/skrollr.min.js"></script>
+<script type="text/javascript" src="library/js/jquery.nicescroll.js"></script>
 <script type="text/javascript">
 /*! modernizr 3.6.0 (Custom Build) | MIT *
  * https://modernizr.com/download/?-cssanimations-csspositionsticky-csstransforms-csstransitions-setclasses !*/
@@ -201,6 +203,133 @@
 .section_overlap .overlap_box .bg_change.color03 {z-index:20; background-color: #c2bada; transition:width .5s 1.2s;}
 .section_overlap.active .overlap_box .bg_change.color03 {width:0px;}
 .section_overlap .overlap_box .bg_change.color04 {z-index:10; background-color: #000;}
+
+#Portfolio{
+  height: 14000px;
+}
+#site-text{
+  font-weight: bold;
+  letter-spacing:0.2em;
+  font-size: 26px;
+  left: 45px;
+  top: 30px;
+
+}
+/* #siteImg{
+
+left: 320px;
+
+filter: drop-shadow(9px 9px 11px #000);
+
+top: 301px;
+} */
+.brand-txt{
+  left: 270px;
+  bottom: 150px;
+  z-index: 150;
+  opacity: 0;
+}
+.year-txt{
+  left: 240px;
+  top: 120px;
+  z-index: 150;
+    opacity: 0;
+}
+.page-txt{
+  right: 300px;
+    opacity: 0;
+  top: 120px;
+  z-index: 150;
+  transform: rotate(90deg);
+}
+.site-name{
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  font-family: 'Nanum Gothic', sans-serif;
+  right: 450px;
+  top: 211px;
+  opacity: 0;
+}
+.site-name span{
+  color: white;
+}
+.link{
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  right: 350px;
+  bottom: 184px;
+  z-index: 150;
+  opacity: 0;
+}
+.link-border{
+opacity: 0;
+background: #000;
+width: 72px;
+height: 1px;
+right: 245px;
+bottom: 198px;
+z-index: 150;
+}
+.bg-txt{
+  background-image: url(../images/our-work.png);
+  width: 16150px;
+  height: 403px;
+  bottom: 220px;
+
+}
+.siteList{
+  width: 7000px;
+  left: 400px;
+  top: 320px;
+}
+.siteList li{
+  width: 347px;
+  height: 256px;
+  margin-right: 800px;
+}
+.cbox1 {
+  position: fixed;
+      right: -1200px;
+      bottom: 120px;
+      z-index: 100;
+      width: 1000px;
+      height: 500px;
+}
+.site-name-wrap{
+  width: 350px;
+      height: 558px;
+      overflow: hidden;
+      position: absolute;
+      left: 189px;
+}
+.scroll_top:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.2);
+}
+.bxxxx{
+  color: red;
+    position: fixed;
+    z-index: 99;
+}
+.qwe{
+height: 2000px;
+background-color: #000;
+}
+body{
+  background-color: #000;
+-ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+
+display:none;
+
+}
 </style>
 <!--
 ****** 2020 깡코딩 LICENSE 안내 ******
@@ -211,6 +340,9 @@
 행위는 민사 및 형사법에 의해 엄격히 규제되어 있으며, 기소 사유가 됩니다.
 -->
 <body>
+  <div class="bxxxx">
+    <span class="scroll_top">200</span>
+  </div>
     <div class="wrap">
         <header class="header_wrap">
             <div class="logo">JJONG</div>
@@ -332,17 +464,23 @@
         </div>
       </article>
     </section>
-    <section id="overLap" class="section_overlap">
-      <article class="overlap_box">
-        <figure class="img_device">
-          <img src="images/img_iphone01.png">
-        </figure>
-        <div class="bg_change color01"></div>
-        <div class="bg_change color02"></div>
-        <div class="bg_change color03"></div>
-        <div class="bg_change color04"></div>
-      </article>
-    </section>
+    <ul class="qwe">
+      <li  class="cbox1" data-7400="right: -1200px;" data-17400="right: 3000px;">
+        <img id="siteImg" class="pa" src="images/01.png" alt="">
+      </li>
+      <li class="cbox1" data-9400="right: -1200px;" data-19400="right: 3000px;">
+        <img id="siteImg" class="pa" src="images/02.png" alt="">
+      </li>
+      <li  class="cbox1" data-11400="right: -1200px;" data-21400="right: 3000px;">
+        <img id="siteImg" class="pa" src="images/03.png" alt="">
+      </li>
+      <li class="cbox1" data-13400="right: -1200px;" data-23400="right: 3000px;">
+        <img id="siteImg" class="pa" src="images/04.png" alt="">
+      </li>
+      <li  class="cbox1" data-15400="right: -1200px;" data-25400="right: 3000px;">
+        <img id="siteImg" class="pa" src="images/05.png" alt="">
+      </li>
+    </ul>
     </div>
     </div>
 <script type="text/javascript">
@@ -594,6 +732,110 @@ $(function(){
 
 
 });
+$(window).scroll(function(){
+  var wScroll = parseInt($(this).scrollTop());
+  $(".scroll_top").text(wScroll);
+
+
+  if(wScroll>3900){
+    $(".site-name").eq(0).animate({
+      opacity:1,
+      right:-6
+    },1200)
+   }
+  if(wScroll>5900){
+   $(".site-name").eq(1).animate({
+     opacity:1,
+     right:-6
+   },1200)
+  }
+  if(wScroll>7900){
+    $(".site-name").eq(2).animate({
+      opacity:1,
+      right:-6
+    },1200)
+   }
+  if(wScroll>9900){
+     $(".site-name").eq(3).animate({
+       opacity:1,
+       right:-6
+     },1200)
+    }
+  if(wScroll>11900){
+      $(".site-name").eq(4).animate({
+        opacity:1,
+        right:-6
+      },1200)
+     }
+
+})
+$(window).scroll(function(){
+  var wScroll = parseInt($(this).scrollTop());
+  $(".scroll_top").text(wScroll);
+
+
+  if(wScroll>3900){
+    $(".site-name").eq(0).animate({
+      opacity:1,
+      right:-6
+    },1200)
+   }
+  if(wScroll>5900){
+   $(".site-name").eq(1).animate({
+     opacity:1,
+     right:-6
+   },1200)
+  }
+  if(wScroll>7900){
+    $(".site-name").eq(2).animate({
+      opacity:1,
+      right:-6
+    },1200)
+   }
+  if(wScroll>9900){
+     $(".site-name").eq(3).animate({
+       opacity:1,
+       right:-6
+     },1200)
+    }
+  if(wScroll>11900){
+      $(".site-name").eq(4).animate({
+        opacity:1,
+        right:-6
+      },1200)
+     }
+
+})
+
+
+$(function(){
+  $("div#menu").mouseover(function(){
+    $(".menutxt span").stop().animate({
+      right:5,
+    },500)
+  })
+  $("div#menu").mouseleave(function(){
+    $(".menutxt span").stop().animate({
+      right:-70,
+    },500)
+  })
+})
+
+setTimeout(function(){
+ $(".loading").fadeOut();
+},3000)
+
+  skrollr.init({
+
+  });
+
+
+setTimeout(function(){
+ $("div#logo").animate({
+   top:"50%",
+   opacity:1
+ },800)
+},3500)
 </script>
 </body>
 </html>
