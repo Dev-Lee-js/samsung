@@ -18,7 +18,7 @@ button { background: none; }
 .blind { position: absolute; overflow: hidden; clip: rect(0 0 0 0); margin: -1px; width: 1px; height: 1px; }
 .clear { clear: both; }
 figure, video { font-size: 0; }
-img { width: 100%; }
+img { width: 650px; }
 
 @font-face {font-family: 'NotoB';
 src:url("../fonts/NotoSans-Black.eot"),
