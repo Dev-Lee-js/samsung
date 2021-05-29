@@ -6,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 <title>삼성 갤럭시 폴드</title>
 <link rel="stylesheet" type="text/css" href="library/css/common.css">
+<link rel="stylesheet" type="text/css" href="library/css/fix_motion.css">
+<link rel="stylesheet" type="text/css" href="library/css/section_product.css">
+<link rel="stylesheet" type="text/css" href="library/css/section_textmask.css">
 <script type="text/javascript" src="library/js/jquery.1.12.4.js"></script>
 <script type="text/javascript" src="library/js/skrollr.min.js"></script>
 <script type="text/javascript" src="library/js/jquery.nicescroll.js"></script>
@@ -15,310 +18,13 @@
 !function(e,n,t){function r(e,n){return typeof e===n}function s(){var e,n,t,s,o,i,a;for(var l in w)if(w.hasOwnProperty(l)){if(e=[],n=w[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(s=r(n.fn,"function")?n.fn():n.fn,o=0;o<e.length;o++)i=e[o],a=i.split("."),1===a.length?Modernizr[a[0]]=s:(!Modernizr[a[0]]||Modernizr[a[0]]instanceof Boolean||(Modernizr[a[0]]=new Boolean(Modernizr[a[0]])),Modernizr[a[0]][a[1]]=s),C.push((s?"":"no-")+a.join("-"))}}function o(e){var n=_.className,t=Modernizr._config.classPrefix||"";if(x&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),x?_.className.baseVal=n:_.className=n)}function i(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):x?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function a(e,n){return function(){return e.apply(n,arguments)}}function l(e,n,t){var s;for(var o in e)if(e[o]in n)return t===!1?e[o]:(s=n[e[o]],r(s,"function")?a(s,t||n):s);return!1}function f(e,n){return!!~(""+e).indexOf(n)}function u(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function c(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function d(n,t,r){var s;if("getComputedStyle"in e){s=getComputedStyle.call(e,n,t);var o=e.console;if(null!==s)r&&(s=s.getPropertyValue(r));else if(o){var i=o.error?"error":"log";o[i].call(o,"getComputedStyle returning null, its possible modernizr test results are inaccurate")}}else s=!t&&n.currentStyle&&n.currentStyle[r];return s}function p(){var e=n.body;return e||(e=i(x?"svg":"body"),e.fake=!0),e}function m(e,t,r,s){var o,a,l,f,u="modernizr",c=i("div"),d=p();if(parseInt(r,10))for(;r--;)l=i("div"),l.id=s?s[r]:u+(r+1),c.appendChild(l);return o=i("style"),o.type="text/css",o.id="s"+u,(d.fake?d:c).appendChild(o),d.appendChild(c),o.styleSheet?o.styleSheet.cssText=e:o.appendChild(n.createTextNode(e)),c.id=u,d.fake&&(d.style.background="",d.style.overflow="hidden",f=_.style.overflow,_.style.overflow="hidden",_.appendChild(d)),a=t(c,e),d.fake?(d.parentNode.removeChild(d),_.style.overflow=f,_.offsetHeight):c.parentNode.removeChild(c),!!a}function y(n,r){var s=n.length;if("CSS"in e&&"supports"in e.CSS){for(;s--;)if(e.CSS.supports(c(n[s]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var o=[];s--;)o.push("("+c(n[s])+":"+r+")");return o=o.join(" or "),m("@supports ("+o+") { #modernizr { position: absolute; } }",function(e){return"absolute"==d(e,null,"position")})}return t}function g(e,n,s,o){function a(){c&&(delete N.style,delete N.modElem)}if(o=r(o,"undefined")?!1:o,!r(s,"undefined")){var l=y(e,s);if(!r(l,"undefined"))return l}for(var c,d,p,m,g,v=["modernizr","tspan","samp"];!N.style&&v.length;)c=!0,N.modElem=i(v.shift()),N.style=N.modElem.style;for(p=e.length,d=0;p>d;d++)if(m=e[d],g=N.style[m],f(m,"-")&&(m=u(m)),N.style[m]!==t){if(o||r(s,"undefined"))return a(),"pfx"==n?m:!0;try{N.style[m]=s}catch(h){}if(N.style[m]!=g)return a(),"pfx"==n?m:!0}return a(),!1}function v(e,n,t,s,o){var i=e.charAt(0).toUpperCase()+e.slice(1),a=(e+" "+T.join(i+" ")+i).split(" ");return r(n,"string")||r(n,"undefined")?g(a,n,s,o):(a=(e+" "+z.join(i+" ")+i).split(" "),l(a,n,t))}function h(e,n,r){return v(e,t,t,n,r)}var C=[],w=[],S={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){w.push({name:e,fn:n,options:t})},addAsyncTest:function(e){w.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=S,Modernizr=new Modernizr;var _=n.documentElement,x="svg"===_.nodeName.toLowerCase(),b=S._config.usePrefixes?" -webkit- -moz- -o- -ms- ".split(" "):["",""];S._prefixes=b,Modernizr.addTest("csspositionsticky",function(){var e="position:",n="sticky",t=i("a"),r=t.style;return r.cssText=e+b.join(n+";"+e).slice(0,-e.length),-1!==r.position.indexOf(n)});var P="Moz O ms Webkit",T=S._config.usePrefixes?P.split(" "):[];S._cssomPrefixes=T;var z=S._config.usePrefixes?P.toLowerCase().split(" "):[];S._domPrefixes=z;var E={elem:i("modernizr")};Modernizr._q.push(function(){delete E.elem});var N={style:E.elem.style};Modernizr._q.unshift(function(){delete N.style}),S.testAllProps=v,S.testAllProps=h,Modernizr.addTest("cssanimations",h("animationName","a",!0)),Modernizr.addTest("csstransforms",function(){return-1===navigator.userAgent.indexOf("Android 2.")&&h("transform","scale(1)",!0)}),Modernizr.addTest("csstransitions",h("transition","all",!0)),s(),o(C),delete S.addTest,delete S.addAsyncTest;for(var k=0;k<Modernizr._q.length;k++)Modernizr._q[k]();e.Modernizr=Modernizr}(window,document);
 </script>
 </head>
-<style type="text/css">
-/* common */
-.wrap {position:relative;}
-.inner {max-width:1100px; height: 100%;  margin: 0 auto;}
-.header_wrap {position: fixed; left:0; top:0; z-index:100; width:100%; height:70px; }
-.header_wrap .logo {margin-top:15px; padding-left:20px; font-size:24px; color:#fff;}
-
-/* main */
-.ggang_box {position:relative; height:500px; background-color:#111;}
-.ggang_box h2 {position: absolute; left:0; top:50%; width: 100%; color:#fff; font-size:80px; line-height:1; text-align: center;}
-
-.fix_motion {position: relative; height: 5000px;}
-.no-csspositionsticky .fix_motion {height: auto;}
-.fix_motion .sticky_cont {overflow: hidden; position: sticky; position: -webkit-sticky; top:0; left: 0; width: 100%; height: 100vh;}
-.no-csspositionsticky .fix_motion .sticky_cont {position: relative}
-.fix_motion .sticky_cont .cont_box {overflow:hidden; position:relative; height: 100%;}
-.fix_motion .sticky_cont .cont_box .intro_txt {position:absolute; left:50%; top:50%; z-index:60; transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -o-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%); transition: opacity .5s;}
-.fix_motion .sticky_cont .cont_box .intro_txt h2 {font-size: 80px; line-height: 1; color:#fff;}
-.fix_motion .sticky_cont .cont_box .intro_txt.active {opacity: 0;}
-.no-csspositionsticky .fix_motion .sticky_cont .cont_box .intro_txt {display: none;}
-.fix_motion .sticky_cont .cont_box .left_mask {position: absolute; left:0; top:0; z-index:50; width:50%; height: 100%; background: #000; }
-.fix_motion .sticky_cont .cont_box .right_mask {position: absolute; right:0; top:0; z-index:50; width:50%; height: 100%; background: #000; }
-.no-csspositionsticky .fix_motion .sticky_cont .cont_box .left_mask {width: 0px;}
-.no-csspositionsticky .fix_motion .sticky_cont .cont_box .right_mask {width: 0px;}
-.fix_motion .sticky_cont .cont_box .bg_img {position:absolute; left:0; top:0; z-index:20; width: 100%; height: 100%; background-image: url('images//steve_jobs.jpg'); background-size: auto 100%; background-repeat: no-repeat; background-position: center center;}
-.fix_motion .sticky_cont .cont_box .ending_txt {position: absolute; left:0; top:0; z-index:30; width: 100%; height: 100%; opacity:0; transition:opacity 1s;}
-.no-csspositionsticky .ending_txt {display: none;}
-.fix_motion .sticky_cont .cont_box .ending_txt:after {position: absolute; left:0; top:0; z-index:-1; width: 100%; height: 100%; background: rgba(255,255,255,1); content:"";}
-.fix_motion .sticky_cont .cont_box .ending_txt.active {opacity: 1;}
-.fix_motion .sticky_cont .cont_box .ending_txt .tb_row {display: table; width: 100%; height: 100%;}
-.fix_motion .sticky_cont .cont_box .ending_txt .tb_row .tb_cell {display: table-cell; vertical-align: middle; text-align: center;}
-.fix_motion .sticky_cont .cont_box .ending_txt .tb_row .tb_cell p {font-size: 80px; color:#000; line-height: 1;}
-
-@media only screen and (max-width: 1024px) {
-.ggang_box h2 {font-size:32px;}
-
-.fix_motion {height: 3000px;}
-.fix_motion .sticky_cont .cont_box .bg_img {background-image: url('images//steve_jobs_m.jpg'); }
-.fix_motion .sticky_cont .cont_box .intro_txt h2 {font-size: 50px;}
-.fix_motion .sticky_cont .cont_box .ending_txt .tb_row .tb_cell p {font-size:50px;}
-}
-.sec01 {position:relative; height:0vh; background: #111;}
-.sec01 .nav_list {position: relative; z-index:20;}
-.sec01 .nav_list .list {}
-.sec01 .nav_list .list li {}
-.sec01 .nav_list .list li a {overflow:hidden; position:relative; display:inline-block; font-size:140px; line-height: 1; color:#fff; transition:transform .5s;}
-.sec01 .nav_list .list li a .mask {position:absolute; left:0; top:0; z-index:10; height:100%; background: #fff; animation:text_mask 2s 1 cubic-bezier(0.24, 0.77, 0.32, 0.95) both; animation-play-state: paused;}
-.sec01 .nav_list .list li a .txt {position:relative; z-index:20; display: block; animation:text_opacity 2s 1s 1 cubic-bezier(0.24, 0.77, 0.32, 0.95) both; animation-play-state: paused;}
-.sec01.active .nav_list .list li a .mask {animation-play-state: running;}
-.sec01.active .nav_list .list li a .txt {animation-play-state: running;}
-
-.sec01 .nav_list .list li a .mask2 {position:absolute; left:0; bottom:0; z-index:-1; width:0%; height:40%; background: #e9c400; transition:width .5s cubic-bezier(0.24, 0.77, 0.32, 0.95);}
-.sec01 .nav_list .list li a:hover {transform:translateX(-10px); -webkit-transform:translateX(-10px); -moz-transform:translateX(-10px); -o-transform:translateX(-10px); -ms-transform:translateX(-10px);}
-.sec01 .nav_list .list li a:hover .mask2 {width:100%;}
-.sec01 .nav_list .list li a:hover {text-decoration: none;}
-.sec01 .nav_list .list li a:focus {text-decoration: none;}
-
-.sec01 .bg_rotate {position:absolute; left:50%; top:50%; z-index:10; width:1200px; height:1215px; margin-left:-357px; margin-top:-350px; background-image:url('images/bg_rotate01.png'); background-repeat: no-repeat; background-size:cover; opacity: .15; animation:rotate_bg 40s infinite linear; animation-play-state: paused;}
-.sec01.active .bg_rotate {animation-play-state: running;}
-
-@keyframes text_mask {
-    0%{
-        width: 0%;
-        margin-left: 0%;
-    }
-    50%{
-        width: 100%;
-        margin-left: 0%;
-    }
-    100%{
-        width: 100%;
-        margin-left: 101%;
-    }
-}
-
-@keyframes text_opacity {
-    0%{
-        opacity: 0;
-        color:#3535ff;
-        transform:translateX(-50%);
-    }
-    100%{
-        opacity: 1;
-        color:#fff;
-        transform:translateX(0%);
-    }
-}
-
-@keyframes rotate_bg {
-    0%{
-        transform:rotate(0deg);
-    }
-    100%{
-        transform:rotate(360deg);
-    }
-}
-
-.section_today {overflow:hidden; position:relative; height:0vh; background: #000; text-align:center;}
-.section_today .date_box {height: 100%;}
-.section_today .date_box .date_count {overflow:hidden; position: relative; display:inline-block; height: 200px; opacity: 0; transition:opacity .5s 1s;}
-.section_today.active .date_box .date_count {opacity: 1;}
-.section_today .date_box .date_count:after {clear:both; display:block; content:'';}
-.section_today .date_box .date_count .count_box { float: left; animation: count_date 2.8s 1 ease-out both; animation-play-state: paused;}
-.section_today .date_box .date_count .count_box.active {animation-play-state: running;}
-.section_today .date_box .date_count .count_box span {display:block; color:#fff; font-size:200px; line-height: 1; text-align: center; -webkit-text-fill-color:transparent; -webkit-text-stroke:6px #fff;}
-
-.section_today .date_box .t_date {position: absolute; left:20px; top:400px; z-index:100; font-size:300px; color:#fff; opacity: .1; transform:translateX(-100%); -webkit-text-fill-color:transparent; -webkit-text-stroke:2px #fff; transition:transform 1s;}
-.section_today.active .date_box .t_date {transform:translateX(0%); -webkit-transform:translateX(0%); -moz-transform:translateX(0%); -o-transform:translateX(0%); -ms-transform:translateX(0%);}
-
-@keyframes count_date {
-    0%{
-        transform: translateY(0px);
-    }
-    100% {
-        transform: translateY(-4800px); /* 높이 x 롤링될 개수 */
-    }
-}
-
-.section_product {background: #000;}
-.section_product .prd_mask {}
-.section_product .prd_mask .tit_wrap {padding:120px 0 80px 0;}
-.section_product .prd_mask .img_list {width:90%; margin:0 auto;}
-.section_product .prd_mask .img_list:after {clear:both; display:block; content:'';}
-.section_product .prd_mask .img_list li {overflow:hidden; position:relative; display:inline-block; width:calc(50% - 40px); padding-right:20px; margin-bottom:20px;}
-.section_product .prd_mask .img_list li:after {position:absolute; right:0; top:0; width:100%; height:100%; background: #000; content:""; transition:2.5s;}
-.section_product .prd_mask.active .img_list li:after {width: 0%;}
-.section_product .prd_mask .img_list li:nth-child(even) {top:-20px;}
-.section_product .prd_mask .img_list li:nth-child(even):after {right:auto; left:0; }
-.section_product .prd_mask .img_list li .img_content {font-size:0; transform:translateX(-101%); -webkit-transform:translateX(-101%); -moz-transform:translateX(-101%); -o-transform:translateX(-101%); -ms-transform:translateX(-101%); transition:1.2s .5s;}
-.section_product .prd_mask.active .img_list li .img_content {transform:translateX(0%); -webkit-transform:translateX(0%); -moz-transform:translateX(0%); -o-transform:translateX(0%); -ms-transform:translateX(0%);}
-.section_product .prd_mask .img_list li .img_content img {width: 100%;}
-
-.section_product .text_img {padding-top:150px; padding-bottom:100px; text-align: center; font-size:0;}
-.section_product .text_img .text_area {display:inline-block; width:60%; padding:0 50px; color:#fff; font-size:40px; vertical-align: middle; text-align: right; box-sizing: border-box; opacity:0; transform:translateX(-150px); -webkit-transform:translateX(-150px); -moz-transform:translateX(-150px); -o-transform:translateX(-150px); -ms-transform:translateX(-150px); transition: 1s;}
-.section_product .text_img.active .text_area {opacity:1; transform:translateX(0px); -webkit-transform:translateX(0px); -moz-transform:translateX(0px); -o-transform:translateX(0px); -ms-transform:translateX(0px); }
-.section_product .text_img .text_area h3 {font-family: 'NotoB'; font-size:64px;}
-.section_product .text_img .text_area p {font-family: 'NotoR'; font-size:24px;}
-.section_product .text_img .img_area {position:relative; display: inline-block; width:30%; vertical-align: middle;}
-.section_product .text_img .img_area:after {position: absolute; right:0; bottom:0; width:100%; height:100%; background:#000; content:""; transition:2s .5s cubic-bezier(0.31, 0.85, 0.31, 1.06);}
-.section_product .text_img.active .img_area:after {height:0px;}
-
-.section_textmask {overflow:hidden; position:relative; padding-top:150px; padding-bottom:200px; background: #000;}
-.section_textmask .txt_area {}
-.section_textmask .txt_area .tit_wrap {}
-.section_textmask .txt_area .motion_area {overflow:hidden; position: relative; margin-top:100px; font-size:150px; line-height:1; color:#fff;}
-.section_textmask .txt_area .motion_area .text_box {overflow:hidden; text-align: center;}
-.section_textmask .txt_area .motion_area .text_box .left {overflow:hidden; float:left; width:50%; height:100%;}
-.section_textmask .txt_area .motion_area .text_box .left p {width:200%;}
-.section_textmask .txt_area .motion_area .text_box .left p span {display:inline-block; padding-bottom:5px; text-align: center; white-space: nowrap; animation:move_text_mask 2.2s 1 both ease-in-out; animation-play-state: paused;}
-.section_textmask.active .txt_area .motion_area .text_box .left p span {animation-play-state: running;}
-
-.section_textmask .txt_area .motion_area .text_box .right {overflow:hidden; float:left; width:50%; height:100%;}
-.section_textmask .txt_area .motion_area .text_box .right p {width:200%; margin-left:-100%; color:#00b8ff;}
-.section_textmask .txt_area .motion_area .text_box .right p span {display:inline-block;padding-bottom:5px; text-align: center; white-space: nowrap; animation:move_text_mask 2.2s 1 both ease-in-out; animation-play-state: paused;}
-.section_textmask.active .txt_area .motion_area .text_box .right p span {animation-play-state: running;}
-
-.section_textmask .txt_area .motion_area .text_box.type02 {}
-.section_textmask .txt_area .motion_area .text_box.type02 span {animation-delay:.3s !important;}
-.section_textmask .txt_area .motion_area .text_box.type02 .left p {color:#00b8ff;}
-.section_textmask .txt_area .motion_area .text_box.type02 .right p {color:#fff;}
-
-.section_textmask .txt_area .motion_area .text_box.type03 span {animation-delay:.6s !important;}
-
-@keyframes move_text_mask{
-	0%{
-		/*transform:translateX(-50%);*/
-		margin-left:-50%;
-	}
-	50%{
-		margin-left:50%;
-	}
-	100%{
-		margin-left:0%;
-	}
-}
-
-.section_overlap {overflow:hidden; position: relative; padding-top:100px; padding-bottom:80px;}
-.section_overlap .overlap_box {}
-.section_overlap .overlap_box .tit_wrap {position: relative; z-index: 60; padding-bottom:50px;}
-.section_overlap .overlap_box .img_device {position: relative; z-index:50; width:300px; margin:0 auto;}
-.section_overlap .overlap_box .bg_change {position: absolute; right:0; top:0; z-index:10; width: 100%; height: 100%;}
-.section_overlap .overlap_box .bg_change.color01 {z-index:40; background-color: #000; transition:width .5s .2s;}
-.section_overlap.active .overlap_box .bg_change.color01 {width:0px;}
-.section_overlap .overlap_box .bg_change.color02 {z-index:30; background-color: #272727; transition:width .5s .7s;}
-.section_overlap.active .overlap_box .bg_change.color02 {width:0px;}
-.section_overlap .overlap_box .bg_change.color03 {z-index:20; background-color: #c2bada; transition:width .5s 1.2s;}
-.section_overlap.active .overlap_box .bg_change.color03 {width:0px;}
-.section_overlap .overlap_box .bg_change.color04 {z-index:10; background-color: #000;}
-
-#Portfolio{
-  height: 14000px;
-}
-#site-text{
-  font-weight: bold;
-  letter-spacing:0.2em;
-  font-size: 26px;
-  left: 45px;
-  top: 30px;
-
-}
-/* #siteImg{
-
-left: 320px;
-
-filter: drop-shadow(9px 9px 11px #000);
-
-top: 301px;
-} */
-.brand-txt{
-  left: 270px;
-  bottom: 150px;
-  z-index: 150;
-  opacity: 0;
-}
-.year-txt{
-  left: 240px;
-  top: 120px;
-  z-index: 150;
-    opacity: 0;
-}
-.page-txt{
-  right: 300px;
-    opacity: 0;
-  top: 120px;
-  z-index: 150;
-  transform: rotate(90deg);
-}
-.site-name{
-  font-size: 80px;
-  font-weight: bold;
-  letter-spacing: 0.15em;
-  font-family: 'Nanum Gothic', sans-serif;
-  right: 450px;
-  top: 211px;
-  opacity: 0;
-}
-.site-name span{
-  color: white;
-}
-.link{
-  font-weight: bold;
-  font-size: 24px;
-  letter-spacing: 0.1em;
-  right: 350px;
-  bottom: 184px;
-  z-index: 150;
-  opacity: 0;
-}
-.link-border{
-opacity: 0;
-background: #000;
-width: 72px;
-height: 1px;
-right: 245px;
-bottom: 198px;
-z-index: 150;
-}
-.bg-txt{
-  background-image: url(../images/our-work.png);
-  width: 16150px;
-  height: 403px;
-  bottom: 220px;
-
-}
-.siteList{
-  width: 7000px;
-  left: 400px;
-  top: 320px;
-}
-.siteList li{
-  width: 347px;
-  height: 256px;
-  margin-right: 800px;
-}
-.cbox1 {
-  position: fixed;
-      right: -1200px;
-      bottom: 120px;
-      z-index: 100;
-      width: 1000px;
-      height: 500px;
-}
-.site-name-wrap{
-  width: 350px;
-      height: 558px;
-      overflow: hidden;
-      position: absolute;
-      left: 189px;
-}
-.qwe{
-height: 2000px;
-background-color: #000;
-}
-body{
-  background-color: #000;
-}
-</style>
 <body>
     <div class="wrap">
         <header class="header_wrap">
             <div class="logo">JJONG</div>
         </header>
-        <section class="fix_motion"> <!-- 스크롤할 거리를 설정하는 엘리먼트 -->
-            <article class="sticky_cont"> <!-- 고정시킬 엘리먼트 sticky -->
+        <section class="fix_motion">
+            <article class="sticky_cont">
                 <div class="cont_box ">
                     <div class="intro_txt">
                         <h2>
@@ -342,13 +48,9 @@ body{
         </section>
         <section class="sec01">
         </section>
-        <section id="toDay" class="section_today">
-        </section>
         <section id="imgMask" class="section_product">
       <article class="prd_mask">
         <div class="tit_wrap">
-          <h2 class="com_tit01">IMAGE MASK</h2>
-          <p class="com_txt01">숨어있다가 나오는 느낌의 이미지 마스크 기법</p>
         </div>
         <ul class="img_list">
           <li>
@@ -378,7 +80,7 @@ body{
           <h3 class="tit">섬세한 색조의 신비로운 미스틱 컬러</h3>
           <p class="txt">
             시대를 초월한 프리미엄을 제시할 두 가지 컬러를 소개합니다.
-무광의 미스틱 브론즈와 클래식한 유광의 미스틱 블랙 컬러는 고급스러운 색감으로 눈길을 사로잡습니다.
+            무광의 미스틱 브론즈와 클래식한 유광의 미스틱 블랙 컬러는 고급스러운 색감으로 눈길을 사로잡습니다.
           </p>
         </div>
         <div class="img_area">
@@ -434,7 +136,7 @@ body{
         </div>
       </article>
     </section>
-    <ul class="qwe">
+    <ul class="hori_scroll">
       <li  class="cbox1" data-7400="right: -1200px;" data-17400="right: 3000px;">
         <img id="siteImg" class="pa" src="images/01.png" alt="">
       </li>
@@ -453,6 +155,7 @@ body{
     </ul>
     </div>
     </div>
+
 <script type="text/javascript">
 $(function(){
 
@@ -618,14 +321,7 @@ $(function(){
 
     $(function(){
 
-    	$('.sec01').GgangSectionIn(function(){
-    		$('.sec01').addClass('active');
-    	});
 
-    	$('.section_today').GgangSectionIn(function(){
-    		$('.section_today').addClass('active');
-    		countDate();
-    	});
 
     	$('.section_product .prd_mask').GgangSectionIn(function(){
     		$('.section_product .prd_mask').addClass('active');
@@ -643,102 +339,10 @@ $(function(){
     		$('.section_overlap').addClass('active');
     	});
 
-    	/* 날짜 카운트*/
-        function countDate(){
-
-            var el = $('.date_count');
-            var date = new Date();
-            var todayDate = String(date.getFullYear()) + String(date.getMonth() + 1) + String(date.getDate()); //오늘의 날짜를 구함
-            var rolling = 24; //롤링될 개수
-            var resultArray = [];
-                resultArray = todayDate.split(''); //롱링할 오늘날짜를 나눠서 배열에 담음
-
-            $.each(resultArray, function(idx, val) {
-    			var conuntBox = $('<div class="count_box" />');
-    			var numberArray = []; //쪼갠 날짜를 담을 배열 선언
-    			var number = Number(val);
-
-                for(var i = 0; i <= rolling; i++){ //롤링될 숫자만큼 값을 생성해 배열에 담음
-                    var sum = number + i;
-                    var num = sum >= 10 ? Number(String(sum).split('')[1]) : sum; //값이 10보다커질경우 첫번째 자릿수를 버리도록 함
-                    numberArray[i] = num;
-                };
-
-                numberArray.reverse(); //롤링방향 때문에 배열을 뒤집어줍니다.
-
-                numberArray.forEach(function(val){ //날짜를 담은 span엘리먼트를 coutBox에 어펜드
-
-                   var countValue = $('<span/>', {
-                        text: val
-    				});
-
-                   countValue.appendTo(conuntBox)
-
-                });
-
-    			conuntBox //최종 엘리먼트에 추가함. 딜레이와 큐를 이용해 롤링 타이밍을 처리합니.
-    			.appendTo(el)
-    			.delay(idx * 300)
-    			.queue(function(){
-    				$(this).addClass('active');
-    			});
-            });
-
-        };
-
-    	/* 네비 리모컨*/
-    	$('.nav_list .list li a').click(function(e){
-
-    		if($(this.hash).offset()){
-    			$('html')
-    			.animate({
-    				scrollTop:$(this.hash).offset().top
-    			}, 500);
-    		}
-
-    	});
-
     });
 
 
 });
-$(window).scroll(function(){
-  var wScroll = parseInt($(this).scrollTop());
-  $(".scroll_top").text(wScroll);
-
-
-  if(wScroll>3900){
-    $(".site-name").eq(0).animate({
-      opacity:1,
-      right:-6
-    },1200)
-   }
-  if(wScroll>5900){
-   $(".site-name").eq(1).animate({
-     opacity:1,
-     right:-6
-   },1200)
-  }
-  if(wScroll>7900){
-    $(".site-name").eq(2).animate({
-      opacity:1,
-      right:-6
-    },1200)
-   }
-  if(wScroll>9900){
-     $(".site-name").eq(3).animate({
-       opacity:1,
-       right:-6
-     },1200)
-    }
-  if(wScroll>11900){
-      $(".site-name").eq(4).animate({
-        opacity:1,
-        right:-6
-      },1200)
-     }
-
-})
 
 
 $(function(){

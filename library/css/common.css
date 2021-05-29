@@ -1,3 +1,5 @@
+
+
 /* reset */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, textarea, input, button { margin: 0; padding: 0; border: 0; font: inherit; vertical-align: baseline; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
@@ -57,3 +59,114 @@ src:url(../fonts/Roboto-Bold.woff) format('woff');
 @media only screen and (max-width: 767px) {
 
 }
+
+
+#Portfolio{
+  height: 14000px;
+}
+#site-text{
+  font-weight: bold;
+  letter-spacing:0.2em;
+  font-size: 26px;
+  left: 45px;
+  top: 30px;
+
+}
+.brand-txt{
+  left: 270px;
+  bottom: 150px;
+  z-index: 150;
+  opacity: 0;
+}
+.year-txt{
+  left: 240px;
+  top: 120px;
+  z-index: 150;
+    opacity: 0;
+}
+.page-txt{
+  right: 300px;
+    opacity: 0;
+  top: 120px;
+  z-index: 150;
+  transform: rotate(90deg);
+}
+.site-name{
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  font-family: 'Nanum Gothic', sans-serif;
+  right: 450px;
+  top: 211px;
+  opacity: 0;
+}
+.site-name span{
+  color: white;
+}
+.link{
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  right: 350px;
+  bottom: 184px;
+  z-index: 150;
+  opacity: 0;
+}
+.link-border{
+opacity: 0;
+background: #000;
+width: 72px;
+height: 1px;
+right: 245px;
+bottom: 198px;
+z-index: 150;
+}
+.bg-txt{
+  background-image: url(../images/our-work.png);
+  width: 16150px;
+  height: 403px;
+  bottom: 220px;
+
+}
+.siteList{
+  width: 7000px;
+  left: 400px;
+  top: 320px;
+}
+.siteList li{
+  width: 347px;
+  height: 256px;
+  margin-right: 800px;
+}
+.cbox1 {
+  position: fixed;
+      right: -1200px;
+      bottom: 120px;
+      z-index: 100;
+      width: 1000px;
+      height: 500px;
+}
+.site-name-wrap{
+  width: 350px;
+      height: 558px;
+      overflow: hidden;
+      position: absolute;
+      left: 189px;
+}
+.hori_scroll{
+height: 2000px;
+background-color: #000;
+}
+body{
+  background-color: #000;
+}
+
+/* common */
+.wrap {position:relative;}
+.inner {max-width:1100px; height: 100%;  margin: 0 auto;}
+.header_wrap {position: fixed; left:0; top:0; z-index:100; width:100%; height:70px; }
+.header_wrap .logo {margin-top:15px; padding-left:20px; font-size:24px; color:#fff;}
+
+/* main */
+.ggang_box {position:relative; height:500px; background-color:#111;}
+.ggang_box h2 {position: absolute; left:0; top:50%; width: 100%; color:#fff; font-size:80px; line-height:1; text-align: center;}
